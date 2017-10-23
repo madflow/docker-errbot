@@ -1,6 +1,6 @@
 FROM python:3.6-alpine 
 
-RUN apk add --no-cache tini
+RUN apk add --no-cache git tini
 RUN apk add --no-cache --virtual .build-deps libffi-dev openssl-dev build-base
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
